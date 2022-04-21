@@ -1,3 +1,5 @@
+@import "variables";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,79 +21,88 @@ p {
 }
 
 body {
-  background-color: #1a6178;
-}
-body .landing-page {
-  width: 100%;
-}
-body .landing-page img {
-  width: 100%;
-}
-body main {
-  margin: 0;
-  background-color: white;
-}
-body main .showcase {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-body main .showcase .products {
-  margin: 20px 0 20px 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
-body main .showcase .products .product {
-  width: 150px;
-}
-body main .showcase .products .product img {
-  width: 100%;
-}
-body main .about {
-  margin: 80px 0px 0px 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-body main .about .img {
-  width: 250px;
-}
-body main .about .img img {
-  width: 100%;
-}
-body main .about .text {
-  text-align: center;
-  width: 80%;
-}
-body main .about .about-section {
-  margin: 20px 0px 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-body footer {
-  background-color: #46b7b7;
-  height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  color: white;
-}
-body footer .info {
-  text-align: center;
-}
-body footer .info div {
-  margin-bottom: 10px;
-}
-body footer .icons {
-  display: flex;
-  justify-content: space-evenly;
-  width: 200px;
-}
-body footer .icons i {
-  font-size: 1.8rem;
+  background-color: $dark-blue;
+
+  .landing-page {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+
+  main {
+    margin: 0;
+    background-color: white;
+
+    .showcase {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .products {
+        margin: 20px 0 20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        .product {
+          width: 150px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .about {
+      margin: 80px 0px 0px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .img {
+        width: 250px;
+        img {
+          width: 100%;
+        }
+      }
+      .text {
+        text-align: center;
+        width: 80%;
+      }
+      .about-section {
+        margin: 20px 0px 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  footer {
+    background-color: $light-blue;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+
+    .info {
+      text-align: center;
+
+      div {
+        margin-bottom: 10px;
+      }
+    }
+
+    .icons {
+      display: flex;
+      justify-content: space-evenly;
+      width: 200px;
+
+      i {
+        font-size: 1.8rem;
+      }
+    }
+  }
 }
 
 .container {
@@ -100,6 +111,7 @@ body footer .icons i {
 }
 
 /* Navbar section */
+
 .nav {
   width: 100%;
   height: 65px;
@@ -107,42 +119,44 @@ body footer .icons i {
   line-height: 65px;
   text-align: center;
   background-color: #ffffffe0;
-}
-.nav .logo {
-  width: 180px;
-  height: 10px;
-  position: absolute;
-  top: 6px;
-}
-.nav .logo .logo-img {
-  width: 55px;
-}
-.nav .logo .logo-img img {
-  width: 100%;
-}
-.nav .main_list {
-  width: 600px;
-  height: 65px;
-  float: right;
-}
-.nav .main_list ul {
-  width: 100%;
-  height: 65px;
-  display: flex;
-  list-style: none;
-}
-.nav .main_list ul li {
-  width: 120px;
-  height: 65px;
-}
-.nav .main_list ul li a {
-  text-decoration: none;
-  color: #1a6178;
-  line-height: 65px;
-  text-transform: uppercase;
-}
-.nav .main_list ul li a:hover {
-  opacity: 0.8;
+
+  .logo {
+    width: 180px;
+    height: 10px;
+    position: absolute;
+    top: 6px;
+    .logo-img {
+      width: 55px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .main_list {
+    width: 600px;
+    height: 65px;
+    float: right;
+    ul {
+      width: 100%;
+      height: 65px;
+      display: flex;
+      list-style: none;
+      li {
+        width: 120px;
+        height: 65px;
+        a {
+          text-decoration: none;
+          color: $dark-blue;
+          line-height: 65px;
+          text-transform: uppercase;
+        }
+        a:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
 }
 
 .nav div.media_button {
@@ -168,7 +182,7 @@ body footer .icons i {
   width: 97%;
   height: 2px;
   display: block;
-  background-color: #46b7b7;
+  background-color: $light-blue;
   margin-top: 9px;
   margin-bottom: 10px;
 }
@@ -188,10 +202,12 @@ body footer .icons i {
   transform: rotate3d(0, 0, 1, -45deg);
   position: absolute;
   top: 25px;
+
   margin: 0;
 }
 
 /* Home section */
+
 .home {
   width: 100%;
   height: 100vh;
@@ -199,15 +215,18 @@ body footer .icons i {
 }
 
 /* Medai qurey section */
+
 @media screen and (min-width: 640px) and (max-width: 1024px) {
   .container {
     margin: 0;
   }
-
-  .main_list ul {
-    justify-content: end;
+  .main_list {
+    ul {
+      justify-content: end;
+    }
   }
 }
+
 @media screen and (max-width: 640px) {
   .container {
     margin: 0;
@@ -255,10 +274,11 @@ body footer .icons i {
     display: block;
   }
 }
+
 @media screen and (min-width: 1024px) {
-  .main_list ul {
-    justify-content: end;
+  .main_list {
+    ul {
+      justify-content: end;
+    }
   }
 }
-
-/*# sourceMappingURL=main.css.map */

@@ -188,6 +188,7 @@ body {
         align-items: end;
 
 
+
         input, textarea,button{
           font-family: myriad-pro, sans-serif;
           width: 230px;
@@ -195,7 +196,10 @@ body {
           margin: 5px;
           border-radius: 3px;
           border: none;
-
+          @include desktop{
+            width: 350px;
+            font-size: 1.01rem;
+          }
 
         }
         button{

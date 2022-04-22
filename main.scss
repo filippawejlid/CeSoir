@@ -23,12 +23,11 @@ p {
 body {
 
   .landing-page {
-    width: 100%;
-
-    img {
-
-      width: 100%;
-    }
+    background-image: url("assets/landingpic.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
   }
 
   .blue{

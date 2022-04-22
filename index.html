@@ -25,9 +25,12 @@
           </div>
           <div class="main_list" id="mainListDiv">
             <ul>
-              <li><a href="#">Tavlor</a></li>
-              <li><a href="#">Om mig</a></li>
-              <li><a href="#">Kontakt</a></li>
+              <li><a href="#paintings">Tavlor</a></li>
+              <li><a href="#about">Om mig</a></li>
+              <li><a href="#contact">Kontakt</a></li>
+              <li>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+              </li>
             </ul>
           </div>
           <div class="media_button">
@@ -44,76 +47,93 @@
       </div>
     </header>
 
-    <main>
-      <div class="showcase">
-        <div class="headline">BÄSTSÄLJANDE TAVLOR</div>
-        <div class="products">
-          <a href="#">
-            <div class="product">
-              <img src="assets/1painting.jpeg" alt="" />
-            </div>
-          </a>
-          <a href="#">
-            <div class="product">
-              <img src="assets/2painting.jpeg" alt="" />
-            </div>
-          </a>
-          <a href="#">
-            <div class="product">
-              <img src="assets/3painting.jpeg" alt="" />
-            </div>
-          </a>
+    <div class="blue">
+      <main>
+        <div class="showcase" id="paintings">
+          <div class="headline">BÄSTSÄLJANDE TAVLOR</div>
+          <div class="products">
+            <a href="#">
+              <div class="product">
+                <img src="assets/1painting.jpeg" alt="" />
+              </div>
+              <p class="headline-small">lorem ipsum</p>
+            </a>
+            <a href="#">
+              <div class="product">
+                <img src="assets/2painting.jpeg" alt="" />
+              </div>
+              <p class="headline-small">dolor sit</p>
+            </a>
+            <a href="#">
+              <div class="product">
+                <img src="assets/3painting.jpeg" alt="" />
+              </div>
+              <p class="headline-small">amet consectetur</p>
+            </a>
+          </div>
+          <a class="headline-small" href="#">SE ALLA TAVLOR</a>
         </div>
-        <a class="headline-small" href="#">SE ALLA TAVLOR</a>
-      </div>
-      <div class="about">
-        <div class="artist about-section">
-          <div class="img">
-            <img src="assets/mamma.jpg" alt="artist" />
+        <div class="about" id="about">
+          <div class="artist about-section">
+            <div class="img">
+              <img src="assets/mamma.jpg" alt="artist" />
+            </div>
+            <div class="text">
+              <div class="headline">VEM ÄR JAG?</div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                at a repellat quasi? Voluptatibus beatae iste earum. Quaerat
+                reiciendis facilis illo laboriosam rerum, ipsam odit delectus.
+                Reiciendis, consequuntur ipsa.
+              </p>
+            </div>
           </div>
-          <div class="text">
-            <div class="headline">VEM ÄR JAG?</div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-              at a repellat quasi? Voluptatibus beatae iste earum. Quaerat
-              reiciendis facilis illo laboriosam rerum, ipsam odit delectus.
-              Reiciendis, consequuntur ipsa. Quae recusandae at distinctio
-              rerum, dolorum aperiam laborum fugiat mollitia cumque reiciendis
-              temporibus fuga fugit facere ducimus earum facilis ipsum adipisci!
-            </p>
-          </div>
-        </div>
-        <div class="art about-section">
-          <div class="img">
-            <img
-              src="assets/young-woman-painting-in-her-atelier-GRSF00072.jpg"
-              alt="artist"
-            />
-          </div>
-          <div class="text">
-            <div class="headline">MITT ARBETE</div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-              at a repellat quasi? Voluptatibus beatae iste earum. Quaerat
-              reiciendis facilis illo laboriosam rerum, ipsam odit delectus.
-              Reiciendis, consequuntur ipsa. Quae recusandae at distinctio
-              rerum, dolorum aperiam laborum fugiat mollitia cumque reiciendis
-              temporibus fuga fugit facere ducimus earum facilis ipsum adipisci!
-            </p>
+          <div class="art about-section">
+            <div class="img">
+              <img
+                src="assets/young-woman-painting-in-her-atelier-GRSF00072.jpg"
+                alt="artist"
+              />
+            </div>
+            <div class="text">
+              <div class="headline">MITT ARBETE</div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                at a repellat quasi? Voluptatibus beatae iste earum. Quaerat
+                reiciendis facilis illo laboriosam rerum, ipsam odit delectus.
+                Reiciendis, consequuntur ipsa.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
 
-    <footer>
-      <div class="info">
-        <div class="headline-small">KONTAKTA MIG</div>
-        <div class="headline-small">DIANA@GMAIL.COM</div>
+    <footer id="contact">
+      <div class="atelje">
+        <div class="info">
+          <div class="headline-small">VART HITTAR DU MIG?</div>
+          <div class="headline-small">KONSTVÄGEN 111, 135 60 KONSTORTEN</div>
+        </div>
+        <div class="icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-pinterest"></i>
+        </div>
       </div>
-      <div class="icons">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-pinterest"></i>
+      <div class="contact">
+        <form action="/">
+          <input type="text" placeholder="Förnamn Efternamn" />
+          <input type="email" placeholder="Emailadress" />
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="5"
+            placeholder="Ditt meddelande..."
+          ></textarea>
+          <button type="submit">Skicka</button>
+        </form>
       </div>
     </footer>
     <script src="index.js"></script>

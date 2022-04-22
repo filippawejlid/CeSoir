@@ -18,80 +18,178 @@ p {
   font-style: normal;
 }
 
-body {
-  background-color: #1a6178;
-}
 body .landing-page {
   width: 100%;
 }
 body .landing-page img {
   width: 100%;
 }
-body main {
+@media screen and (min-width: 640px) {
+  body .blue {
+    background-color: #1a6178;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+body .blue main {
   margin: 0;
   background-color: white;
 }
-body main .showcase {
+@media screen and (min-width: 640px) {
+  body .blue main {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body .blue main {
+    width: 60%;
+  }
+}
+body .blue main .showcase {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body main .showcase .products {
+body .blue main .showcase .products {
   margin: 20px 0 20px 0;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  align-items: flex-end;
 }
-body main .showcase .products .product {
+body .blue main .showcase .products .product {
   width: 150px;
 }
-body main .showcase .products .product img {
+@media screen and (min-width: 1024px) {
+  body .blue main .showcase .products .product {
+    width: 180px;
+  }
+}
+body .blue main .showcase .products .product img {
   width: 100%;
 }
-body main .about {
+body .blue main .showcase .products a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+body .blue main .showcase .headline-small {
+  text-decoration: none;
+  color: black;
+}
+body .blue main .showcase .headline-small:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+body .blue main .about {
   margin: 80px 0px 0px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body main .about .img {
+body .blue main .about .img {
   width: 250px;
 }
-body main .about .img img {
+@media screen and (min-width: 640px) {
+  body .blue main .about .img {
+    width: 200px;
+  }
+}
+body .blue main .about .img img {
   width: 100%;
 }
-body main .about .text {
+body .blue main .about .text {
   text-align: center;
   width: 80%;
 }
-body main .about .about-section {
+@media screen and (min-width: 640px) {
+  body .blue main .about .text {
+    width: 50%;
+    text-align: left;
+    padding: 10px;
+  }
+}
+body .blue main .about .about-section {
   margin: 20px 0px 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 640px) {
+  body .blue main .about .about-section {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 640px) {
+  body .blue main .about .art {
+    flex-direction: row-reverse;
+  }
+  body .blue main .about .art .text {
+    text-align: end;
+  }
+}
 body footer {
   background-color: #46b7b7;
-  height: 180px;
+  height: 420px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   color: white;
+  width: 100%;
 }
-body footer .info {
+@media screen and (min-width: 640px) {
+  body footer {
+    flex-direction: row;
+    height: 300px;
+    justify-content: space-evenly;
+  }
+}
+body footer .atelje {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 130px;
+}
+body footer .atelje .info {
   text-align: center;
 }
-body footer .info div {
+body footer .atelje .info div {
   margin-bottom: 10px;
 }
-body footer .icons {
+body footer .atelje .icons {
   display: flex;
   justify-content: space-evenly;
   width: 200px;
 }
-body footer .icons i {
+body footer .atelje .icons i {
   font-size: 1.8rem;
+}
+body footer .contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+body footer .contact form input, body footer .contact form textarea, body footer .contact form button {
+  font-family: myriad-pro, sans-serif;
+  width: 230px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 3px;
+  border: none;
+}
+body footer .contact form button {
+  width: 80px;
+  cursor: pointer;
+  background-color: white;
+}
+body footer .contact form button:hover {
+  background-color: whitesmoke;
+  transition: 0.2s;
 }
 
 .container {
@@ -113,6 +211,7 @@ body footer .icons i {
   height: 10px;
   position: absolute;
   top: 6px;
+  margin-left: 15px;
 }
 .nav .logo .logo-img {
   width: 55px;
@@ -199,7 +298,7 @@ body footer .icons i {
 }
 
 /* Medai qurey section */
-@media screen and (min-width: 640px) and (max-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
   .container {
     margin: 0;
   }
@@ -208,7 +307,7 @@ body footer .icons i {
     justify-content: end;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   .container {
     margin: 0;
   }

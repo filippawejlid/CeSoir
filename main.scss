@@ -1,4 +1,4 @@
-@import "variables";
+@import "mixins";
 
 * {
   box-sizing: border-box;
@@ -21,18 +21,35 @@ p {
 }
 
 body {
-  background-color: $dark-blue;
 
   .landing-page {
     width: 100%;
+
     img {
+
       width: 100%;
     }
   }
 
+  .blue{
+
+    @include tablet {
+      background-color: $dark-blue;
+          display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+  
   main {
     margin: 0;
     background-color: white;
+
+    @include tablet {
+      width: 80%;
+    }
+    @include desktop {
+      width: 60%;
+    }
 
     .showcase {
       display: flex;
@@ -43,12 +60,35 @@ body {
         width: 100%;
         display: flex;
         justify-content: space-evenly;
+        align-items: flex-end;
+
         .product {
           width: 150px;
+          
+          @include desktop{
+            width: 180px;
+
+          }
+
           img {
             width: 100%;
           }
         }
+        a{
+          text-align: center;
+          text-decoration: none;
+          color: black;
+        }
+      }
+      .headline-small{
+        text-decoration: none;
+        color: black;
+
+      }
+      .headline-small:hover{
+        opacity: 0.7;
+        transition: 0.2s;
+
       }
     }
 
@@ -57,8 +97,12 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+
       .img {
         width: 250px;
+        @include tablet{
+          width: 200px;
+        }
         img {
           width: 100%;
         }
@@ -66,40 +110,104 @@ body {
       .text {
         text-align: center;
         width: 80%;
+        @include tablet{
+          width: 50%;
+          text-align: left;
+          padding: 10px;
+        }
       }
       .about-section {
         margin: 20px 0px 20px 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center;        
+        @include tablet{
+          flex-direction: row;
+          justify-content: center;
+        }
+      }
+      .art{
+        @include tablet{
+          flex-direction: row-reverse;
+          .text{
+            text-align: end;
+          }
+        }
       }
     }
   }
+}
 
   footer {
     background-color: $light-blue;
-    height: 180px;
+    height: 420px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     color: white;
+    width: 100%;
 
-    .info {
-      text-align: center;
-
-      div {
-        margin-bottom: 10px;
-      }
+    @include tablet {
+      flex-direction: row;
+      height: 300px;
+      justify-content: space-evenly;
     }
 
-    .icons {
+    .atelje{
+      margin: 20px;
       display: flex;
-      justify-content: space-evenly;
-      width: 200px;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 130px;
 
-      i {
-        font-size: 1.8rem;
+      .info {
+        text-align: center;
+        
+        div {
+          margin-bottom: 10px;
+        }
+      }
+      
+      .icons {
+        display: flex;
+        justify-content: space-evenly;
+        width: 200px;
+        
+        i {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    .contact{
+
+      form{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+
+        input, textarea,button{
+          font-family: myriad-pro, sans-serif;
+          width: 230px;
+          padding: 5px;
+          margin: 5px;
+          border-radius: 3px;
+          border: none;
+
+
+        }
+        button{
+          width: 80px;
+          cursor: pointer;
+          background-color: white;
+          &:hover{
+            background-color: whitesmoke;
+            transition: 0.2s;
+          }
+        }
+        
       }
     }
   }
@@ -125,6 +233,7 @@ body {
     height: 10px;
     position: absolute;
     top: 6px;
+    margin-left: 15px;
     .logo-img {
       width: 55px;
 
@@ -216,7 +325,7 @@ body {
 
 /* Medai qurey section */
 
-@media screen and (min-width: 640px) and (max-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
   .container {
     margin: 0;
   }
@@ -227,7 +336,7 @@ body {
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px){
   .container {
     margin: 0;
   }
